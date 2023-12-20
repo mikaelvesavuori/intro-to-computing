@@ -1,0 +1,24 @@
+service: intro-to-computing
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  architecture: arm64
+  stage: ${opt:stage, 'demo'}
+  region: ${opt:region, 'eu-north-1'}
+  memorySize: ${opt:memory, 1024}
+  timeout: ${opt:timeout, 10}
+  logRetentionInDays: ${opt:logRetentionInDays, 1}
+  httpApi:
+    cors: true
+
+plugins:
+  - serverless-offline
+
+functions:
+  DemoFunction:
+    handler: index.handler
+    events:
+      - httpApi:
+          method: GET
+          path: /

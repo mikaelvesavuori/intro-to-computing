@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <head>
+    <title>
+      Introduction to Computing
+    </title>
+
+    <style>
+      body {
+        background-color: dodgerblue;
+        color: white;
+      }
+
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="heading">Introduction to Computing</h1>
+
+    <script>
+      addEventListener("click", async (event) => {
+        const message = "Hello world!"; // await fetch("https://RANDOM.execute-api.REGION.amazonaws.com").then((response) => response.json())
+        if (event.target.id === "heading") alert(message);
+      });
+    </script>
+  </body>
+</html>
