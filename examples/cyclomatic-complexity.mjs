@@ -1,5 +1,5 @@
 // Complexity: 12
-function overlyComplexSum(arr) {
+function complexSum(arr) {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
     if (typeof arr[i] === 'number') {
@@ -24,7 +24,7 @@ function overlyComplexSum(arr) {
 }
 
 const complexArray = [1, '2', [3, '4', { num: '5' }]];
-const complexResult = overlyComplexSum(complexArray);
+const complexResult = complexSum(complexArray);
 console.log(complexResult); // Outputs: 15
 
 // Complexity: 1
